@@ -1,0 +1,25 @@
+{
+  "name": "outfit-planner",
+  "version": "1.0.0",
+  "description": "A mobile web application for outfit planning with AI-powered recommendations",
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "cd server && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build && cd ../server && npm run build",
+    "test": "cd client && npm test && cd ../server && npm test"
+  },
+  "keywords": [
+    "outfit-planner",
+    "fashion",
+    "ai",
+    "react",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+} 
