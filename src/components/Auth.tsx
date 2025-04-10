@@ -27,6 +27,7 @@ export const Auth: React.FC = () => {
           />
         </h1>
         <p className="auth-subtitle">Take the stress out of getting dressed.</p>
+        console.log('Redirect URI:', redirectUri);
         <SupabaseAuth
           supabaseClient={supabase}
           appearance={{
