@@ -119,4 +119,65 @@ npm run build
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Database Setup
+
+To use all features of the application, you need to set up the following tables in your Supabase database:
+
+1. `user_settings` - Stores user settings including Google Calendar integration
+2. `outfit_schedules` - Stores scheduled outfits
+3. `events` - Stores calendar events
+
+### Setting up the tables
+
+1. Go to your Supabase dashboard
+2. Navigate to the SQL Editor
+3. Run the following SQL files in order:
+   - `user_settings.sql`
+   - `outfit_schedules.sql`
+   - `events.sql`
+
+## Google Calendar Integration
+
+To use the Google Calendar integration:
+
+1. Set up a Google Cloud project
+2. Enable the Google Calendar API
+3. Create OAuth 2.0 credentials
+4. Add the following environment variables to your `.env` file:
+   ```
+   REACT_APP_GOOGLE_API_KEY=your_api_key
+   REACT_APP_GOOGLE_CLIENT_ID=your_client_id
+   ```
+
+## Content Security Policy
+
+The application uses a Content Security Policy to secure the application. If you encounter issues with images or Google Calendar integration, you may need to update the CSP in `client/public/index.html`.
+
+## Troubleshooting
+
+### Google Calendar Integration Issues
+
+If you're having issues with the Google Calendar integration:
+
+1. Check that your Google API credentials are correct
+2. Ensure the `user_settings` table exists and has the correct structure
+3. Check the browser console for errors
+4. Try disconnecting and reconnecting your Google Calendar
+
+### Image Loading Issues
+
+If images are not loading:
+
+1. Check the Content Security Policy in `client/public/index.html`
+2. Ensure the image URLs are allowed in the CSP
+3. Check that the image URLs are correct
+
+### Database Issues
+
+If you're having issues with the database:
+
+1. Check that all required tables exist
+2. Ensure the tables have the correct structure
+3. Check that Row Level Security is enabled and policies are set up correctly 
