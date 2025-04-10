@@ -489,17 +489,17 @@ const OutfitPlanner: React.FC = () => {
         throw new Error('No authenticated user found');
       }
       
-      // Load the Google API client
-      if (typeof window.gapi === 'undefined') {
-        console.log('Loading Google API script...');
-        await new Promise((resolve, reject) => {
-          const script = document.createElement('script');
-          script.src = 'https://apis.google.com/js/api.js';
-          script.onload = resolve;
-          script.onerror = reject;
-          document.body.appendChild(script);
-        });
-      }
+      //// Load the Google API client
+      //if (typeof window.gapi === 'undefined') {
+      //  console.log('Loading Google API script...');
+      //  await new Promise((resolve, reject) => {
+      //    const script = document.createElement('script');
+      //    script.src = 'https://apis.google.com/js/api.js';
+      //    script.onload = resolve;
+      //    script.onerror = reject;
+      //    document.body.appendChild(script);
+      //  });
+      //}
       
       // Initialize the Google API client
       console.log('Initializing Google API client...');
