@@ -5,6 +5,11 @@ import { ThemeSupa } from '@supabase/auth-ui-shared';
 import '../styles/main.css';
 
 export const Auth: React.FC = () => {
+  // Dynamically set the redirect URI based on the environment
+  const redirectUri = process.env.NODE_ENV === 'production'
+    ? 'https://wrdrb.vercel.app/callback' // Production redirect URL
+    : 'http://localhost:3000/auth/callback'; // Localhost redirect URL
+
   return (
     <div className="auth-container">
       <div className="auth-card">
@@ -45,10 +50,10 @@ export const Auth: React.FC = () => {
             },
           }}
           providers={['google']}
-          redirectTo={`${window.location.origin}/auth/callback`}
+          redirectTo={redirectUri}  // Use the dynamic redirect URI
           onlyThirdPartyProviders
         />
       </div>
     </div>
   );
-}; 
+};
