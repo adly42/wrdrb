@@ -10,6 +10,7 @@ export const Auth: React.FC = () => {
   const redirectUri = process.env.NODE_ENV === 'production'
     ? 'https://wrdrb.vercel.app/callback' // Production redirect URL
     : 'http://localhost:3000/auth/callback'; // Localhost redirect URL
+  console.log('Redirect URI:', redirectUri);
 
   return (
     <div className="auth-container">
@@ -27,7 +28,6 @@ export const Auth: React.FC = () => {
           />
         </h1>
         <p className="auth-subtitle">Take the stress out of getting dressed.</p>
-        console.log('Redirect URI:', redirectUri);
         <SupabaseAuth
           supabaseClient={supabase}
           appearance={{
