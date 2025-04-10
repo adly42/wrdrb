@@ -1,13 +1,12 @@
-# Outfit Planner
+# wrdrb
 
-A mobile web application that helps users plan their outfits with AI-powered recommendations, weather integration, and a smart calendar system.
+A mobile web application that helps users plan their outfits by connecting to their calendar and showing the weather. This was created for ENTI 674, taught by Dr. Mohammad Keyhani, by Adly Azim, Margaret Bauer, Carter Chopin, Ravinthie Dharmappriya, and Nadine Lachman.
 
 ## Features
 
 - Google OAuth 2.0 Authentication
-- Clothing Database with AI Classification
+- Digitized Clothing Database with user-defined classification tags
 - Calendar with Weather & Event Integration
-- AI-Powered Outfit Recommendations
 - Mix & Match Interface
 - Modern, Clean UI with Serif Fonts
 
@@ -16,7 +15,7 @@ A mobile web application that helps users plan their outfits with AI-powered rec
 - Frontend: React.js with TypeScript
 - Backend: Node.js with Express
 - Database: Supabase
-- Styling: Tailwind CSS
+- Styling: Custom CSS
 - Authentication: Google OAuth 2.0
 - APIs: Google Calendar, OpenWeather
 
