@@ -88,9 +88,7 @@ npm run dev
 
 ## Development
 
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
+The application will be available at https://wrdrb.vercel.app
 
 ## Deployment
 
