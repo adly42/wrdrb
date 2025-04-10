@@ -88,7 +88,7 @@ npm run dev
 
 ## Development
 
-The application will be available at https://wrdrb.vercel.app
+The live deployment of wrdrb is available at https://wrdrb.vercel.app
 
 ## Deployment
 
