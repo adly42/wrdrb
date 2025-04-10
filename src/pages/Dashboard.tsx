@@ -13,7 +13,6 @@ interface User {
 const Dashboard: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const navigate = useNavigate();
-  console.log("Environment:", process.env.NODE_ENV);
   useEffect(() => {
     const fetchUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
@@ -27,10 +26,6 @@ const Dashboard: React.FC = () => {
   
     fetchUser();
   }, []);
-
-  const handleClothingScanner = () => {
-    navigate('/scanner');
-  };
 
   const handleLogout = async () => {
     try {

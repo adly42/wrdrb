@@ -4,6 +4,7 @@ import { Auth as SupabaseAuth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-shared';
 import '../styles/main.css';
 
+console.log("Environment:", process.env.NODE_ENV);
 export const Auth: React.FC = () => {
   // Dynamically set the redirect URI based on the environment
   const redirectUri = process.env.NODE_ENV === 'production'
@@ -25,7 +26,7 @@ export const Auth: React.FC = () => {
             }}
           />
         </h1>
-        <p className="auth-subtitle">Sign in to manage your wardrobe</p>
+        <p className="auth-subtitle">Take the stress out of getting dressed.</p>
         <SupabaseAuth
           supabaseClient={supabase}
           appearance={{
